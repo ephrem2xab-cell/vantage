@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vantage Performance — See Further. Decide Better. Perform Higher.</title>
 <script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Register brand colors as real Tailwind tokens so opacity modifiers
+  // (text-ice/70, bg-navy-deep/95, border-navy/20, etc.) actually generate CSS.
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { DEFAULT: '#1E2761', deep: '#10163F' },
+          ice: '#CADCFC',
+          gold: { DEFAULT: '#B08D34', light: '#D9BE7E' },
+          paper: '#FAF8F4',
+          ink: { DEFAULT: '#1B1E2B', soft: '#565B72' },
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Inter', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -21,15 +42,6 @@
   *{ scroll-behavior: smooth; }
   body{ font-family:'Inter', sans-serif; background:var(--paper); color:var(--ink); }
   .font-serif-display{ font-family:'Fraunces', serif; }
-  .text-navy{ color:var(--navy); }
-  .bg-navy{ background-color:var(--navy); }
-  .bg-navy-deep{ background-color:var(--navy-deep); }
-  .text-gold{ color:var(--gold); }
-  .bg-gold{ background-color:var(--gold); }
-  .border-gold{ border-color:var(--gold); }
-  .text-ice{ color:var(--ice); }
-  .bg-ice{ background-color:var(--ice); }
-  .text-ink-soft{ color:var(--ink-soft); }
 
   .eyebrow{
     font-family:'Inter', sans-serif;
